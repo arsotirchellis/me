@@ -1,321 +1,528 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
 
-    <title></title>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Archontellis Rafail Sotirchellis - CV</title>
+    <!-- Optional Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* Base resets and styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+        html,
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f9f9f9;
+            color: #444;
+            line-height: 1.6;
+        }
 
-    <!-- Σύνδεση με τους default κανόνες css του template -->
-    <link rel="stylesheet" href="w3-style.css">
-    <!-- Εισαγωγή γραμματοσειράς Lato -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-    <!-- Εισαγωγή εικονιδίων της Google -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
-    <!-- Εισαγωγή εικονιδίων από τη γραμματοσειρά awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        body {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px 40px;
+        }
 
-    <style type="text/css">
+        /************************************
+         * HEADER STYLES
+         ************************************/
+        header {
+            margin: 20px 0 30px;
+        }
 
-    html, body {
-      font-family: "Lato", sans-serif;
-      height: 100%;
-      color: rgba(15, 15, 15, 1.0);
-      line-height: 1.8;
-      background-color: ghostwhite;
-    }
+        header h1 {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
 
-    h1, h2, h3, h4, h5, h6 {
-      font-family: "Lato", sans-serif;
-    }
+        header p {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 0;
+        }
 
-    .material-symbols-outlined {
-      font-size: 1.3em;
-    }
+        header a {
+            color: #2C5FA1;
+            text-decoration: none;
+        }
 
-    /* Δημιουργία εφέ παράλλαξης */
-    .bgimg-1, .bgimg-2, .bgimg-3 {
-      background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
+        header a:hover {
+            text-decoration: underline;
+        }
 
-    /* Πρώτη εικόνα (Λογότυπο) */
-    .bgimg-1 {
-      background-image: url(photos/zk_bgimg_1.jpg);
-      min-height: 100%;
-    }
+        /************************************
+         * HEADINGS
+         ************************************/
+        h2 {
+            font-size: 1.6rem;
+            color: #2C5FA1;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #2C5FA1;
+        }
 
-    /* Δεύτερη εικόνα (Έργα μου) */
-    .bgimg-2 {
-      background-image: url(photos/zk_bgimg_2.jpg);
-      min-height: 400px;
-    }
+        h3 {
+            font-size: 1.3rem;
+            margin-top: 20px;
+            margin-bottom: 6px;
+            color: #333;
+        }
 
-    /* Τρίτη εικόνα (Επικοινωνία) */
-    .bgimg-3 {
-      background-image: url(photos/zk_bgimg_3.jpg);
-      min-height: 400px;
-    }
+        h4 {
+            margin-top: 15px;
+            font-size: 1.1rem;
+        }
 
-    .w3-display-middle {
-      white-space:nowrap;
-    }
+        /************************************
+         * SECTIONS
+         ************************************/
+        section {
+            margin-bottom: 30px;
+        }
 
-    #about {
-      height: 100%;
-    }
+        /************************************
+         * LISTS
+         ************************************/
+        ul,
+        ol {
+            margin: 10px 0 20px 1.5rem;
+        }
 
-    #portfolio {
-      min-height: 100%;
-    }
+        li {
+            margin-bottom: 5px;
+        }
 
-    #myphoto {
-      width: 300px;
-    }
+        /************************************
+         * HORIZONTAL RULE
+         ************************************/
+        hr {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 20px 0;
+        }
 
-    #thumpP, #thumpV {
-      margin-left: 1.3em; 
-      margin-right: 1.3em;
-    }
+        /************************************
+         * TEXT & BIO
+         ************************************/
+        strong {
+            font-weight: 500;
+        }
 
-    #portfolioPHOTO, #portfolioVIDEO {
-      margin-top: 4em; 
-      margin-bottom: 2em;
-    }
+        .bio {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: #fff;
+            border-radius: 4px;
+            padding: 12px;
+            margin-bottom: 15px;
+        }
 
-    #foot {
-      font-size:0.9em;
-    }
+        .bio:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+        }
 
-    /*κεντράρισμα εικονιδίων φωτογραφιών και βίντεο*/
-    @media (min-width: 600px) {
-          #thumpP {
-            display: flex; 
-            justify-content: center;
-          }
-    }
-    
-    @media (min-width: 600px) {
-          #thumpV {
-            display: flex; 
-            justify-content: center;
-      }
-    }
+        .bio p {
+            margin-bottom: 10px;
+        }
 
-    /* Απενεργοποίηση παράλλαξης για τάμπλετ και κινητά */
-    @media only screen and (max-device-width: 1600px) {
-      .bgimg-1, .bgimg-2, .bgimg-3 {
-        background-attachment: scroll;
-        min-height: 400px;
-      }
-    }
+        /************************************
+         * EXPERIENCE
+         ************************************/
+        .experience-block {
+            margin-bottom: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: #fff;
+            border-radius: 4px;
+            padding: 12px;
+        }
+
+        .experience-block:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+        }
+
+        .job-role {
+            font-style: italic;
+            color: #333;
+        }
+
+        .job-duration {
+            color: #777;
+            font-size: 0.9rem;
+            margin-bottom: 4px;
+        }
+
+        /************************************
+         * SOCIAL ICONS
+         ************************************/
+        .fab, .fas {
+            margin-right: 5px;
+            font-size: 1.1em;
+        }
+
+        header a {
+            transition: color 0.2s ease, text-decoration 0.2s ease;
+        }
+
+        header a:hover {
+            color: #1a365d;
+            text-decoration: underline;
+        }
+
+        header a:hover .fab {
+            color: #1a365d;
+        }
+
+        .fa-location-dot {
+            color: #666;
+        }
+
+        /************************************
+         * COMPANY LOGOS
+         ************************************/
+        .company-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 8px;
+        }
+
+        .company-logo {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+        }
+
+        .company-header h3 {
+            margin-top: 0;
+            margin-bottom: 2px;
+        }
+
+        .job-content {
+            margin-bottom: 12px;
+        }
+
+        .job-content h4 {
+            margin-top: 0;
+            margin-bottom: 2px;
+        }
+
+        .job-content ul {
+            margin-top: 6px;
+        }
+
+        @media (max-width: 480px) {
+            .company-logo {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        /* PDF Export Button */
+        #exportPDFBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #2C5FA1;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1rem;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        #exportPDFBtn:hover {
+            background-color: #1a365d;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        @media print {
+            #exportPDFBtn {
+                display: none !important;
+            }
+            
+            body {
+                background-color: #fff;
+                padding: 0;
+                margin: 0;
+            }
+
+            .experience-block, .bio {
+                box-shadow: none !important;
+                transform: none !important;
+            }
+        }
+
+        /* Remove all GWI Timeline CSS */
+
+        .timeline-content .job-role {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1.1rem;
+            color: #333;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .timeline-content .job-duration {
+            color: #666;
+            font-size: 0.9rem;
+            margin-left: 0;
+            display: block;
+        }
+
+        .timeline-content ul {
+            margin-top: 12px;
+            margin-left: 0;
+        }
+
+        .timeline-content ul li {
+            margin-bottom: 8px;
+            color: #444;
+        }
+
+        .timeline-content ul ul {
+            margin-top: 8px;
+            margin-left: 1.2rem;
+        }
     </style>
+</head>
 
-  </head>
+<body>
 
-  <body>
-
-    <!-- Μενού (μονίμως στην κορυφή) -->
-    <nav class="w3-top">
-      <div class="w3-bar" id="myNavbar" style="background-color: white;">
-        <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-        <a href="#home" class="w3-bar-item w3-button"><b>ΑΡΧΙΚΗ</b></a>
-        <a href="#about" class="w3-bar-item w3-button w3-hide-small"><b>ΓΙΑ ΕΜΕΝΑ</b></a>
-        <a href="#portfolioPHOTO" class="w3-bar-item w3-button w3-hide-small"><b>ΕΡΓΑ ΜΟΥ</b></a>
-        <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><b>ΕΠΙΚΟΙΝΩΝΙΑ</b></a>
-      </div>
-
-      <!-- Μενού για μικρές οθόνες -->
-      <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-        <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ΓΙΑ ΕΜΕΝΑ</a>
-        <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">ΕΡΓΑ ΜΟΥ</a>
-        <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">ΕΠΙΚΟΙΝΩΝΙΑ</a>
-      </div>
-    </nav>
-
-    <!-- Πρώτη εικόνα παράλλαξης και κείμενο λογοτύπου -->
-    <header class="bgimg-1 w3-display-container w3-opacity-min" id="home">
-      <div class="w3-display-middle">
-        <!-- Μικραίνει το κείμενο όταν μικραίνει το μήκος της οθόνης -->
-        <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"><span class="w3-hide-small">ZOI</span> KOTSAMPASI</span>
-        <!-- Παραμένει το αρχικό κείμενο χωρίς να αλλάζει γραμμή, όταν μικραίνει η οθόνη: 
-          <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity" style="break-inside: avoid;">MY WEBSITE LOGO</span> -->
-      </div>
+    <!-- HEADER: Name + Basic Contact Info -->
+    <header>
+        <h1>Archontellis Rafail Sotirchellis</h1>
+        <p>
+            <i class="fas fa-location-dot"></i> Athens, Greece |
+            <a href="mailto:arsotirchellis@gmail.com">
+                <i class="fas fa-envelope"></i> arsotirchellis@gmail.com
+            </a> |
+            <a href="https://github.com/arsotirchellis" target="_blank">
+                <i class="fab fa-github"></i> @arsotirchellis
+            </a> |
+            <a href="https://www.linkedin.com/in/arsotirchellis" target="_blank">
+                <i class="fab fa-linkedin"></i> @arsotirchellis
+            </a> |
+            <a href="https://x.com/asotirchellis" target="_blank">
+                <i class="fab fa-x-twitter"></i> @asotirchellis
+            </a>
+        </p>
     </header>
 
-    <!-- Τμήμα "ΓΙΑ ΕΜΕΝΑ" -->
-    <section class="w3-content w3-container w3-padding-64" id="about">
-      <div>
-        <br>
-        <h3 class="w3-center"><b>Ζωή Κοτσάμπαση</b></h3>
-        <h6 class="w3-center">Αρχιτέκτων Μηχανικός-Φωτογράφος</h6>
-        <br>
-        <p  class="w3-center"><img src="photos/ΖΩΗ-1.jpg" style="width:30%; 
-        class="w3-round w3-image" alt="my photo" id="myphoto" title="..."></p>
-        <div id="statement" style="font-size:1.1em; text-align:center; margin-bottom:1em;">
-          <br>
-          <p>Η Ζωή Κοτσάμπαση είναι Διπλωματούχος Αρχιτέκτονας Μηχανικός Ε.Μ.Π. έχει MSc στον Βιοκλιματικό Σχεδιασμό Πόλεων και Κτιρίων και είναι τελειόφοιτη του Τμήματος Φωτογραφίας και Οπτικοακουστικών Τεχνών του Π.Α.Δ.Α. Τον Ιανουάριο του 1990 ίδρυσε το Architectural Lab – Zoi Kotsampasi & Partners.</p>
-          <p>Στο φωτογραφικό της έργο αφηγείται προσωπικές ιστορίες που αποτελούνται από θραύσματα μνήμης τα οποία συνθέτει με ένα αρχιτεκτονικό και γλυπτικό τρόπο, όπου το τοπίο, αστικό – περιαστικό – φυσικό, αλλά και τα ταξίδια της από τα διάφορα μέρη του κόσμου αποτελούν αφορμές για δημιουργία. Έχει συμμετάσχει σε εκθέσεις φωτογραφίας τόσο στην Αθήνα όσο και στα Χανιά
-          </p>
-        </div>
-        </div>
-        <div class="w3-row">
-        <p><br></p>
+    <!-- BIO -->
+    <section>
+        <h2>Bio</h2>
+        <div class="bio">
+            <p>
+                Born in <strong>Athens, 1995</strong>, Archontellis discovered his passion for programming in high school.
+                After studying <strong>Computer Science</strong> at the
+                <strong>Athens University of Economics and Business</strong>—and interning at several software
+                companies—he began his career as a subcontractor for <strong>Microsoft</strong> in the banking sector.
+                Today, at <strong>GWI</strong>, he specializes in Go, React, Kubernetes, and distributed systems—
+                leading the integration of Large Language Models and building internal libraries for logging, tracing,
+                and metrics. Over the past year, he’s spearheaded an initiative to automate market research insights
+                with LLMs—and occasionally daydreams about financing a trip to Mars.
+            </p>
+
+            <p>When he's not taming code, you might find him:</p>
+            <ul>
+                <li><strong>Brainstorming</strong> AI, space exploration, or the latest science breakthroughs.</li>
+                <li><strong>Automating</strong> his home—because flipping light switches is so last year.</li>
+                <li><strong>Gardening</strong> (which may or may not involve IoT sensors to keep the plants happy).</li>
+                <li><strong>Reading</strong> (or listening to) everything from <strong>politics and philosophy</strong>
+                    to <strong>tech, finance</strong>, and even <strong>parenting</strong>.</li>
+                <li><strong>Snowboarding</strong>, hiking, or pumping iron, because a healthy mind needs a healthy body.
+                </li>
+            </ul>
         </div>
     </section>
 
-    <!-- Δεύτερη εικόνα παράλλαξης και κείμενο "ΕΡΓΑ ΜΟΥ" -->
-    <div class="bgimg-2 w3-display-container w3-opacity-min">
-      <div class="w3-display-middle">
-        <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">έργα μου</span>
-      </div>
-    </div>
+    <!-- EXPERIENCE -->
+    <section class="experience">
+        <h2>Experience</h2>
 
-    <!-- Τμήμα "ΕΡΓΑ ΜΟΥ" Φωτογραφία -->
-    <section class="w3-content w3-container" id="portfolio">
-    
-      <div class="w3-content w3-container" id="portfolioPHOTO">
-      <h3 class="w3-center">Φωτογραφία</h3>
-      <p class="w3-center"><em>Κάντε κλικ επάνω στις εικόνες για να δείτε τις φωτογραφίες των πρότζεκτ</em></p>
-      </div>
+        <!-- GWI Experience -->
+        <div class="experience-block">
+            <div class="company-header">
+                <img src="images/companies/GWI-logo.jpg" alt="GWI Logo" class="company-logo">
+                <div>
+                    <h3>GWI</h3>
+                    <p class="job-duration">(2020 - Present)</p>
+                </div>
+            </div>
 
+            <!-- GWI: Engineering Manager -->
+            <div class="job-content">
+                <h4>Engineering Manager</h4>
+                <p class="job-duration">(2024 - Present)</p>
+                <ul>
+                    <li>Leading a team of senior backend, frontend, ML, and AI engineers to enhance GWI's platform</li>
+                    <li>Developing Spark, a new product for automating market research insights</li>
+                    <li>Building GWI's entire AI infrastructure</li>
+                </ul>
+            </div>
 
-      <!-- Προσαρμοζόμενη θέση εικόνων αναλόγως της οθόνης. Σε κινητά, η μία εικόνα κάτω από την άλλη, σε υπολογιστές ως τέσσερις στήλες εικόνων -->
-      <figure class="w3-row-padding w3-center" id="thumpP">
-        <div class="w3-col m3">
-          <a href="gallery-p1.html"><img src=photos/gallery-p1/zk_bgimg_5.jpg style="width:100%; border: 1px solid lightgray;" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist over the mountains" title="..."></a>
+            <!-- GWI: Senior Software Engineer -->
+            <div class="job-content">
+                <h4>Senior Software Engineer</h4>
+                <p class="job-duration">(Apr 2022 - Apr 2024 · 2 yrs 1 mo)</p>
+                <ul>
+                    <li>Built and integrated LLMs, vector databases, and related AI tools into GWI's platform</li>
+                    <li>Developed shared libraries and tooling for the entire engineering department, including:
+                        <ul>
+                            <li><strong>Go OpenTelemetry Wrapper</strong> for distributed tracing (Grafana Tempo)</li>
+                            <li><strong>Prometheus Integration</strong> library for consistent metrics collection</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- GWI: Software Engineer -->
+            <div class="job-content">
+                <h4>Software Engineer</h4>
+                <p class="job-duration">(Mar 2020 - Apr 2022 · 2 yrs 2 mos)</p>
+                <ul>
+                    <li>Designed and maintained microservices and micro-frontends in Go, Python, Postgres, gRPC, Docker,
+                        Kubernetes, Terraform, and GCP</li>
+                    <li>Implemented React and TypeScript solutions on the frontend</li>
+                </ul>
+            </div>
         </div>
 
-        <div class="w3-col m3">
-          <a href="gallery-p3.html"><img src="photos/gallery-p3/zk_bgimg_1.jpg" style="width:100%; border: 1px solid lightgray;" onclick="onClick(this)" class="w3-hover-opacity" alt="Coffee beans" title="..."></a>
+        <!-- Microsoft -->
+        <div class="experience-block">
+            <div class="company-header">
+                <img src="images/companies/microsoft_logo.jpeg" alt="Microsoft Logo" class="company-logo">
+                <div>
+                    <h3>Microsoft (Subcontractor via Omniworks)</h3>
+                    <p class="job-duration">(2019 - 2020)</p>
+                </div>
+            </div>
+            <ul>
+                <li>Contributed as a <strong>Full-Stack Developer</strong> in a seven-member scrum team building an
+                    e-banking application</li>
+                <li><strong>Backend:</strong> .NET 4.6.2, C#</li>
+                <li><strong>Frontend:</strong> Angular 7, TypeScript, RxJS, SCSS, Angular Material, Bootstrap</li>
+            </ul>
         </div>
 
-        <div class="w3-col m3">
-          <a href="gallery-p4.html"><img src=photos/gallery-p4/zk_bgimg_1.jpg style="width:100%; border: 1px solid lightgray;" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist over the mountains" title="..."></a>
+        <!-- Software Engineer / Freelancer -->
+        <div class="experience-block">
+            <h3>Software Engineer / Freelancer</h3>
+            <p class="job-duration">(2017 - 2019)</p>
+            <ol>
+                <li>
+                    <strong>Driving License Platform</strong>
+                    <ul>
+                        <li>Xamarin.Android & Xamarin.iOS apps for students to practice driving theory</li>
+                        <li>Angular 4 web client for driving schools to track progress</li>
+                        <li>Backend: C# (ASP.NET Web API), hosted on Microsoft Azure</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Cloud Inventory Management & Analysis</strong>
+                    <ul>
+                        <li>Built for a small publishing house</li>
+                        <li>Technologies: C#, ASP.NET Web API, SQL Server, Angular 4, TypeScript, Microsoft Azure</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Android Educational Application</strong>
+                    <ul>
+                        <li>Interactive barcode scanner for additional media content in books</li>
+                        <li>Driving exam test simulators</li>
+                        <li>Technologies: Java 8, Gradle, Android SDK</li>
+                    </ul>
+                </li>
+            </ol>
         </div>
 
-        <div class="w3-col m3">
-          <a href="gallery-p5.html"><img src="photos/gallery-p5/zk_bgimg_1.jpg" style="width:100%; border: 1px solid lightgray;" onclick="onClick(this)" class="w3-hover-opacity" alt="Coffee beans" title="..."></a>
-        </div>
-      </figure>
-
-      <!-- Προσαρμοζόμενη θέση εικόνων αναλόγως της οθόνης. Σε κινητά, η μία εικόνα κάτω από την άλλη, σε υπολογιστές ως τέσσερις στήλες εικόνων - 2η γραμμή -->
-      <figure class="w3-row-padding w3-center" id="thumpP">
-        <div class="w3-col m3">
-          <a href="gallery-p6.html"><img src=photos/gallery-p6/MG_7895.jpg style="width:100%; border: 1px solid lightgray;" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist over the mountains" title="..."></a>
-        </div>
-
-        <div class="w3-col m3">
-          <a href="gallery-p7.html"><img src="photos/gallery-p7/zk_bgimg_2a.jpg" style="width:100%; border: 1px solid lightgray;" onclick="onClick(this)" class="w3-hover-opacity" alt="Coffee beans" title="..."></a>
-        </div>
-
-        <div class="w3-col m3">
-          <a href="gallery-p8.html"><img src=photos/gallery-p8/zk_bgimg_1.jpg style="width:100%; border: 1px solid lightgray;" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist over the mountains" title="..."></a>
+        <!-- Internships -->
+        <div class="experience-block">
+            <div class="company-header">
+                <img src="images/companies/Cycom-logo.png" alt="Cycom Logo" class="company-logo">
+                <div>
+                    <h4>Cycom Business Solutions LTD</h4>
+                    <p class="job-duration">(Jan 2015 – Oct 2015 · 10 mos)</p>
+                </div>
+            </div>
+            <ul>
+                <li>Specialized in .NET ecosystem</li>
+                <li>Responsible for platform testing, daily progress reports, and involved in project management</li>
+            </ul>
         </div>
 
-        <div class="w3-col m3">
-          <a href="gallery-p9.html"><img src="photos/gallery-p9/zk_bgimg_1.jpg" style="width:100%; border: 1px solid lightgray;" onclick="onClick(this)" class="w3-hover-opacity" alt="Coffee beans" title="..."></a>
+        <!-- ReportBrain -->
+        <div class="experience-block">
+            <h4>ReportBrain Limited</h4>
+            <p class="job-duration">(Jul 2014 – Sep 2014 · 3 mos)</p>
+            <ul>
+                <li>Worked on web technologies: JavaScript, AngularJS</li>
+                <li>Gained experience in agile project organization and collaboration</li>
+            </ul>
         </div>
-
-      </figure>
-      
-    <!-- Τμήμα "ΕΡΓΑ ΜΟΥ" Βίντεο -->
-    <div class="w3-content w3-container" id="portfolioVIDEO">
-      <h3 class="w3-center">Βίντεο</h3>
-      <p class="w3-center"><em>Κάντε κλικ επάνω στις εικόνες για να δείτε τα βίντεο</em></p>
-   
-
-      <!-- Προσαρμοζόμενη θέση εικόνων αναλόγως της οθόνης. Σε κινητά, η μία εικόνα κάτω από την άλλη, σε υπολογιστές ως τέσσερις στήλες εικόνων -->
-     <figure class="w3-row-padding w3-center w3-section"  id="thumpV">
-
-      <span class="w3-center"></iframe></span> 
-     <div class="w3-col m3">
-          <a href="gallery-v2.html"><img src="videos/gallery-v2/VIDEO.jpg" style="width:100%; border: 1px solid lightgray;" onclick="onClick(this)" class="w3-hover-opacity" alt="My beloved typewriter" title="..."></a>
-        </div>
-        <!--<div class="w3-col m3">
-          <img src="https://www.w3schools.com/w3images/p5.jpg" style="width:100%; border: 1px solid lightgray;" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist" title="...">
-        </div> -->
-
-        <!-- <div class="w3-col m3">
-          <a href="gallery-v2.html"><img src="https://www.w3schools.com/w3images/p6.jpg" style="width:100%; border: 1px solid lightgray;" onclick="onClick(this)" class="w3-hover-opacity" alt="My beloved typewriter" title="..."></a>
-        </div>
-
-        <div class="w3-col m3">
-          <img src="https://www.w3schools.com/w3images/p7.jpg" style="width:100%; border: 1px solid lightgray;" onclick="onClick(this)" class="w3-hover-opacity" alt="Empty ghost train" title="...">
-        </div>
-
-        <div class="w3-col m3">
-          <img src="https://www.w3schools.com/w3images/p8.jpg" style="width:100%; border: 1px solid lightgray;" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing" title="...">
-        </div> -->
-       
-     </figure>
-     <br> 
-    <br>
-    
     </section>
 
-    <!-- Τρίτη εικόνα παράλλαξης και κείμενο "ΕΠΙΚΟΙΝΩΝΙΑ"  -->
-    <div class="bgimg-3 w3-display-container w3-opacity-min">
-      <div class="w3-display-middle">
-         <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">επικοινωνία</span>
-      </div>
-    </div>
 
-    <!-- Τμήμα "ΕΠΙΚΟΙΝΩΝΙΑ" -->
-    <section class="w3-content w3-container w3-padding-64" id="contact">
-      <h3 class="w3-center">Τρόποι επικοινωνίας</h3>
-      <p class="w3-center"><em>για ανατροφοδότηση, ερωτήσεις, συνεργασίες</em></p>
-      <p class="w3-center"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3145.8379498458175!2d23.746292599999997!3d37.9575696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bd719c9823cb%3A0x4214dcb82f881eda!2sAthinagorou%2024%2C%20Athina%20116%2032!5e0!3m2!1sen!2sgr!4v1673112579013!5m2!1sen!2sgr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
-
-      <div class="w3-row w3-padding-32 w3-section">
-        <div class="w3-center">
-          <div class="w3-large w3-margin-bottom">
-            <p><span class="material-symbols-outlined">mail</span><br>Αθηναγόρου 24, <br>Αθήνα, Τ.Κ. 11632, Ελλάδα</p>
-            <p><span class="material-symbols-outlined">call</span><br>(+30) 2107290044<br>(+30) 6945410910</p>
-            <p><span class="material-symbols-outlined">alternate_email</span><br><a href="mailto:fo16111@uniwa.gr">fo16111@uniwa.gr</a></p>
-            <p><span class="material-symbols-outlined">connect_without_contact</span><br>
-            <span style="font-size: 1.15em"><a href="https://www.facebook.com/KotsampasiPartners/" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a> &nbsp; 
-            <a href="https://www.instagram.com/zoi_kotsampasi/" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a> &nbsp; 
-            <a href="https://www.linkedin.com/school/university-of-west-attica/mycompany/" target="_blank"><i class="fa fa-linkedin-square w3-hover-opacity"></i></a></span></p>
-          </div>
+    <!-- EDUCATION -->
+    <section class="education">
+        <h2>Education</h2>
+        <div class="experience-block">
+            <h3>BSc Computer Science</h3>
+            <p class="job-duration">(Athens University of Economics and Business, Graduated Sep 2018)</p>
+            <ul>
+                <li>Outstanding performance in Software Development, Database Design, Java, Data Structures, AI, and C++
+                </li>
+                <li>Led multiple programming projects (Connect-4 with AI, ID3 decision trees, C++ image processing)</li>
+                <li>Specialized in Databases, Knowledge Management, Operational Research, and IT Economics</li>
+            </ul>
         </div>
-      </div>
+
+        <div class="experience-block">
+            <h3>High School Diploma</h3>
+            <p class="job-duration">(Papagos Public School, Athens, Greece, Graduated May 2013)</p>
+        </div>
     </section>
 
-    <!-- Υποσέλιδο -->
-    <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-      <p id="foot">Zoi Kotsampasi, 2022-23</p>
-    </footer>
-     
-    <script type="text/javascript">
+    <!-- Export PDF Button -->
+    <button id="exportPDFBtn">Export to PDF</button>
 
-    // Change style of navbar on scroll
-    window.onscroll = function() {myFunction()};
-    function myFunction() {
-        var navbar = document.getElementById("myNavbar");
-        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-            navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
-        } else {
-            navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
-        }
-    }
+    <!-- html2pdf.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
-    // Used to toggle the menu on small screens when clicking on the menu button
-    function toggleFunction() {
-        var x = document.getElementById("navDemo");
-        if (x.className.indexOf("w3-show") == -1) {
-            x.className += " w3-show";
-        } else {
-            x.className = x.className.replace(" w3-show", "");
-        }
-    }
+    <script>
+        document.getElementById('exportPDFBtn').addEventListener('click', function() {
+            const elementToPrint = document.body;
+            const opt = {
+                margin: [0.4, 0.4],
+                filename: 'Archontellis-Rafail-Sotirchellis-CV.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 1.5, useCORS: true, letterRendering: true },
+                jsPDF: { unit: 'in', format: [10, 33], orientation: 'portrait' },
+                pagebreak: { mode: 'avoid-all' } // tries to avoid splitting an element across pages
+            };
+
+            // Generate the PDF
+            html2pdf().from(elementToPrint).set(opt).save();
+        });
     </script>
+</body>
 
-  </body>
 </html>
