@@ -337,7 +337,7 @@
                 companies—he began his career as a subcontractor for <strong>Microsoft</strong> in the banking sector.
                 Today, at <strong>GWI</strong>, he specializes in Go, React, Kubernetes, and distributed systems—
                 leading the integration of AI and building internal libraries for logging, tracing,
-                and metrics. Over the past year, he’s spearheaded an initiative to automate market research insights
+                and metrics. Over the past year, he's spearheaded an initiative to automate market research insights
                 with LLMs and Agents.
             </p>
 
@@ -417,10 +417,10 @@
                 </div>
             </div>
             <ul>
-                <li>Contributed as a <strong>Full-Stack Developer</strong> in a seven-member scrum team building an
+                <li>Contributed as a <strong>Full-Stack Engineer</strong> in a seven-member scrum team building an
                     e-banking application</li>
-                <li><strong>Backend:</strong> .NET 4.6.2, C#</li>
-                <li><strong>Frontend:</strong> Angular 7, TypeScript, RxJS, SCSS, Angular Material, Bootstrap</li>
+                <li><strong>Backend:</strong> .NET, C#.</li>
+                <li><strong>Frontend:</strong> Angular 7, TypeScript, RxJS, SCSS, Angular Material.</li>
             </ul>
         </div>
 
@@ -432,24 +432,24 @@
                 <li>
                     <strong>Driving License Platform</strong>
                     <ul>
-                        <li>Xamarin.Android & Xamarin.iOS apps for students to practice driving theory</li>
-                        <li>Angular 4 web client for driving schools to track progress</li>
-                        <li>Backend: C# (ASP.NET Web API), hosted on Microsoft Azure</li>
+                        <li>Xamarin.Android & Xamarin.iOS apps for students to practice driving theory.</li>
+                        <li>Angular 4 web client for driving schools to track progress.</li>
+                        <li>Backend: C# (ASP.NET Web API), hosted on Microsoft Azure.</li>
                     </ul>
                 </li>
                 <li>
                     <strong>Cloud Inventory Management & Analysis</strong>
                     <ul>
-                        <li>Built for a small publishing house</li>
-                        <li>Technologies: C#, ASP.NET Web API, SQL Server, Angular 4, TypeScript, Microsoft Azure</li>
+                        <li>Built for a small publishing house.</li>
+                        <li>Technologies: C#, ASP.NET Web API, SQL Server, Angular 4, TypeScript, Microsoft Azure.</li>
                     </ul>
                 </li>
                 <li>
                     <strong>Android Educational Application</strong>
                     <ul>
-                        <li>Interactive barcode scanner for additional media content in books</li>
-                        <li>Driving exam test simulators</li>
-                        <li>Technologies: Java 8, Gradle, Android SDK</li>
+                        <li>Interactive barcode scanner for additional media content in books.</li>
+                        <li>Driving exam test simulators.</li>
+                        <li>Technologies: Java 8, Gradle, Android SDK.</li>
                     </ul>
                 </li>
             </ol>
@@ -475,8 +475,8 @@
             <h4>ReportBrain Limited</h4>
             <p class="job-duration">(Jul 2014 – Sep 2014 · 3 mos)</p>
             <ul>
-                <li>Worked on web technologies: JavaScript, AngularJS</li>
-                <li>Gained experience in agile project organization and collaboration</li>
+                <li>Worked with JavaScript and AngularJS.</li>
+                <li>Gained my first experiences in agile delivery and collaboration.</li>
             </ul>
         </div>
     </section>
@@ -510,6 +510,10 @@
 
     <script>
         document.getElementById('exportPDFBtn').addEventListener('click', function() {
+            // Hide the button before generating PDF
+            const pdfButton = document.getElementById('exportPDFBtn');
+            pdfButton.style.display = 'none';
+
             const elementToPrint = document.body;
             const opt = {
                 margin: [0.4, 0.4],
@@ -517,11 +521,15 @@
                 image: { type: 'jpeg', quality: 0.98 },
                 html2canvas: { scale: 1.5, useCORS: true, letterRendering: true },
                 jsPDF: { unit: 'in', format: [10, 33], orientation: 'portrait' },
-                pagebreak: { mode: 'avoid-all' } // tries to avoid splitting an element across pages
+                pagebreak: { mode: 'avoid-all' }
             };
 
             // Generate the PDF
-            html2pdf().from(elementToPrint).set(opt).save();
+            html2pdf().from(elementToPrint).set(opt).save()
+                .then(() => {
+                    // Show the button again after PDF is generated
+                    pdfButton.style.display = 'block';
+                });
         });
     </script>
 </body>
